@@ -1,10 +1,29 @@
 Page({
   data:{
-    productos:[],
-    prodCar:[]
+    email: "",
+    emailError: ""
   },
+  onEmailInput: function(e) {
+    const email = e.detail.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailRegex.test(email);
+    if (isValidEmail) {
+      this.setData({email, emailError: ""});
+    } else {
+      this.setData({email, emailError: "Ingresa un correo electrónico válido"});
+    }
+  },
+  formSubmit: function(e) {  
+    console.log(e)
+    let email = e.detail.value.email;
+    console.log("Correo electrónico enviado:", email);
+  },
+  
   onLoad() {
-   
+    this.setData({
+      productos:[],
+      prodCar:[]
+    }) 
     let aux = this.data.productos;
     for (let i = 1; i <=30; i++) {
       aux.push('Producto '+i)     

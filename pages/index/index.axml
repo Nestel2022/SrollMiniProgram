@@ -3,7 +3,17 @@
   <view class="titulo">
     Tienda Claro    
   </view>  
-  <view>  
+  <view>
+    <form onSubmit="formSubmit">
+      <label>
+        Correo electrónico:
+        <input type="email" name="email" value="{{email}}" onBlur="onEmailInput" />
+        <text class="error">{{emailError}}</text>
+      </label>     
+      <button formType="submit">Enviar</button>
+    </form>
+  </view>
+  <view> 
     <button class="btn" size="default"  type="primary" loading={{true}} onTap="verCarrito">Ir al Carrito</button>
   </view> 
   <scroll-view class="scroll" scroll-y>
@@ -19,7 +29,4 @@
 
 
 
-
-
-  
 </view>
