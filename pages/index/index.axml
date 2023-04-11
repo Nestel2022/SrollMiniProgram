@@ -1,4 +1,25 @@
 
-<view>
-  this is a blank page
+<view class="contenido">
+  <view class="titulo">
+    Tienda Claro    
+  </view>  
+  <view>  
+    <button class="btn" size="default"  type="primary" loading={{true}} onTap="verCarrito">Ir al Carrito</button>
+  </view> 
+  <scroll-view class="scroll" scroll-y>
+    <view a:for="{{ productos }}" a:for-item="item" id="{{item}}" onTap="addToCar">
+      {{item}}      
+    </view>
+  </scroll-view>
+
+
+
+
+
+
+
+
+
+
+  
 </view>

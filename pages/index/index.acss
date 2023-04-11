@@ -1,0 +1,43 @@
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  height: auto;
+  background: white;
+  border-radius: 15rpx;
+  overflow: hidden;
+  padding: .5rem .5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 32rpx 0;
+}
+
+
+.titulo {
+  font-size: 50rpx;
+  font-weight: 700;
+  padding: 12rpx 0;
+}
+.scroll{
+  background-color:var(--color-main);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border-radius: 8px;
+  margin: 5%;
+  padding: 5%;
+  
+}
+.scroll view{
+  background-color: #eaeef1c9;
+  color: rgb(50, 99, 233);
+  border-radius: 8px;
+  font-size: 24px; 
+  width: 95%;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;  
+}

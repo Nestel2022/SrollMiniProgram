@@ -1,0 +1,60 @@
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  height: auto;
+  background: white;
+  border-radius: 15rpx;
+  overflow: hidden;
+  padding: .5rem .5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 32rpx 0;
+}
+
+.titulo {
+  font-size: 50rpx;
+  font-weight: 700;
+  padding: 12rpx 0;
+}
+.scrollHoriz{
+  background-color:rgba(190, 184, 184, 0.342);
+  width: 90%;
+  height: auto;
+  display: flex;
+  gap:12px;
+  align-items: center; 
+  padding: .5rem .5rem;  
+  border-radius: 15rpx; 
+}
+.scrollHoriz view{
+  background-color:var(--color-main) ;
+  color: #fff; 
+  border-radius: 8px;
+  font-size: 15px;   
+  margin: 15rpx 0;
+  padding: 10px;
+  text-align: center;  
+}
+
+movable-area {
+  height: 370rpx;
+  width: 400rpx;
+  margin: 50rpx 0rpx 0 50rpx;
+  overflow: hidden;
+  background-image:
+  url("https://i.ibb.co/SBSdwWZ/Whats-App-Image-2023-04-10-at-14-55-22.jpg");
+}
+
+movable-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 165rpx;
+  width: 163rpx;
+  background: #232323;
+  color: #fff;
+}
+.mensaje{
+  margin-top: 30px;
+}

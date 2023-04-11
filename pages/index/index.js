@@ -1,35 +1,43 @@
 Page({
-  onLoad(query) {
-    // 页面加载
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+  data:{
+    productos:[],
+    prodCar:[]
   },
-  onReady() {
-    // 页面加载完成
+  onLoad() {
+   
+    let aux = this.data.productos;
+    for (let i = 1; i <=30; i++) {
+      aux.push('Producto '+i)     
+    }
+    this.setData({
+      productos:aux
+    }) 
+    
+  },  
+  addToCar(e){
+    let aux2 = this.data.prodCar;
+    aux2.push(e.target.id),
+    my.alert({content: `${e.target.id} añadido correctamente`})
+
+    this.setData({
+      prodCar:aux2
+    })
+    
+
   },
-  onShow() {
-    // 页面显示
-  },
-  onHide() {
-    // 页面隐藏
-  },
-  onUnload() {
-    // 页面被关闭
-  },
-  onTitleClick() {
-    // 标题被点击
-  },
-  onPullDownRefresh() {
-    // 页面被下拉
-  },
-  onReachBottom() {
-    // 页面被拉到底部
-  },
-  onShareAppMessage() {
-    // 返回自定义分享信息
-    return {
-      title: 'My App',
-      desc: 'My App description',
-      path: 'pages/index/index',
-    };
-  },
+
+  verCarrito(){
+    my.setStorageSync({
+      key: 'carProd',
+      data: {
+        productos: this.data.prodCar     
+        
+      }
+    });
+    my.navigateTo({
+      url: '/pages/carrito/carrito'
+    });
+  }
+
+  
 });

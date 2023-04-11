@@ -1,0 +1,30 @@
+<view class="contenido">
+  <view class="titulo">
+    Carrito de compras    
+  </view>  
+  <view>
+    Productos Añadidos
+  </view>
+  <scroll-view class="scrollHoriz" scroll-x>  
+    <view a:for="{{ prodCar }}" a:for-item="item">
+      {{item}}      
+    </view>
+  </scroll-view>
+
+  <view class="mensaje">
+    Para finalizar la compra, realiza la siguiente validación.    
+  </view>
+
+  <movable-area>
+    <movable-view x="{{x}}" y="{{y}}" 
+    direction="all" onTouchEnd="setElement">
+  </movable-view>
+  </movable-area>
+
+  <button size="default" type="primary" onTap="finCompra" style="display:{{estadoBtn}}"  
+  >Finalizar Compra</button>
+ 
+
+</view>
+
+
